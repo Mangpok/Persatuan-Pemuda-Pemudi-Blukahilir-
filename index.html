@@ -24,11 +24,11 @@
                 <span class="text-xl font-bold ml-2">กลุ่มเยาวชนบ้านบลูกาฮีเล</span>
             </a>
             <!-- เมนูนำทางสำหรับเดสก์ท็อป -->
-            <nav class="hidden md:flex items-center space-x-6">
-                <a href="#about" class="text-gray-600 hover:text-green-600 transition-colors duration-300">เกี่ยวกับเรา</a>
-                <a href="#activities" class="text-gray-600 hover:text-green-600 transition-colors duration-300">กิจกรรม</a>
-                <a href="#financials" class="text-gray-600 hover:text-green-600 transition-colors duration-300">ยอดเงิน</a>
-                <!-- ปุ่มบริจาคที่ถูกเปลี่ยนเป็นปุ่มเปิด Modal -->
+            <nav class="hidden md:flex items-center space-x-2">
+                <a href="#about" class="text-gray-600 hover:text-green-600 transition-colors duration-300 px-4 py-2">เกี่ยวกับเรา</a>
+                <a href="#activities" class="text-gray-600 hover:text-green-600 transition-colors duration-300 px-4 py-2">กิจกรรม</a>
+                <a href="#financials" class="text-gray-600 hover:text-green-600 transition-colors duration-300 px-4 py-2">ยอดเงิน</a>
+                <button id="report-button-desktop" class="text-gray-600 font-semibold py-2 px-4 rounded-full hover:bg-gray-100 transition-colors duration-300">ข้อเสนอแนะ/ร้องเรียน</button>
                 <button id="donate-button-desktop" class="bg-green-600 text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-green-700 transition-colors duration-300">บริจาค</button>
             </nav>
             <!-- ปุ่มเมนูสำหรับมือถือ -->
@@ -39,12 +39,14 @@
             </button>
         </div>
         <!-- เมนูสำหรับมือถือ -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
-            <a href="#about" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors duration-300">เกี่ยวกับเรา</a>
-            <a href="#activities" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors duration-300">กิจกรรม</a>
-            <a href="#financials" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors duration-300">ยอดเงิน</a>
-            <!-- ปุ่มบริจาคสำหรับมือถือ -->
-            <button id="donate-button-mobile" class="block w-full text-center mt-4 mx-4 bg-green-600 text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-green-700 transition-colors duration-300">บริจาค</button>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4 px-4">
+            <a href="#about" class="block py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-300">เกี่ยวกับเรา</a>
+            <a href="#activities" class="block py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-300">กิจกรรม</a>
+            <a href="#financials" class="block py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-300">ยอดเงิน</a>
+            <div class="mt-4 border-t pt-4 space-y-2">
+                <button id="donate-button-mobile" class="block w-full text-center bg-green-600 text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-green-700 transition-colors duration-300">บริจาค</button>
+                <button id="report-button-mobile" class="block w-full text-center bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full hover:bg-gray-300 transition-colors duration-300">ข้อเสนอแนะ/ร้องเรียน</button>
+            </div>
         </div>
     </header>
 
@@ -57,7 +59,6 @@
                     <p class="text-lg text-gray-600 mb-6">
                         เป็นการรวมกลุ่มของเยาวชนบ้านบลูกาฮีเล ต.บาตง อ.รือเสาะ จ.นราธิวาส เพื่อช่วยเหลือชุมชนในด้านต่างๆ ไม่ว่าจะเป็นความเป็นอยู่ ความรู้ และกิจกรรมสังคม โดยมีเป้าหมายเพื่อสร้างความรัก ความสามัคคี และพัฒนาชุมชนให้ก้าวหน้ายิ่งขึ้น
                     </p>
-                    <!-- ลบลิงก์ "อ่านเพิ่มเติม" ออก -->
                 </div>
                 <div class="relative group">
                     <img id="about-slideshow-img" src="https://scontent-sin6-3.xx.fbcdn.net/v/t39.30808-6/520173233_771203252144785_6022430290871095271_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=e2nfsEHfbCoQ7kNvwHT_dDM&_nc_oc=AdlicaPno_IsAOReeOSMzNT7ASlSByd-XairtgKQ30VQKLmvJGFFtCe8ebwQopjOiJc&_nc_zt=23&_nc_ht=scontent-sin6-3.xx&_nc_gid=ix3c2_EniHSAFzkcIzG9OQ&oh=00_AfUdN6ZDjuZMbnhRNvSWTqD_UbdU031GvjNYx18pdQv2HA&oe=689D0BB9" alt="ภาพกิจกรรม" class="rounded-3xl shadow-xl w-full h-auto object-cover transition-all duration-300">
@@ -147,16 +148,18 @@
     <footer class="bg-gray-800 text-gray-300 py-10 px-4">
         <div class="container mx-auto text-center">
             <p>&copy; 2025 กลุ่มเยาวชนบ้านบลูกาฮีเล. สงวนลิขสิทธิ์</p>
-            <!-- ส่วนติดต่อ Facebook ที่อัปเดตแล้ว -->
-            <p class="mt-4 text-sm">
-                ติดต่อเราได้ที่: 
-                <a href="https://www.facebook.com/blukahilir" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors duration-300">
-                    <svg class="inline-block h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.505 1.492-3.89 3.777-3.89 1.094 0 2.24.195 2.24.195v2.46h-1.26c-1.243 0-1.63.774-1.63 1.563V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
-                    </svg>
-                    Persatuan Pemuda Pemudi Blukahilir
-                </a>
-            </p>
+            <!-- ส่วนติดต่อ Facebook -->
+            <div class="mt-4">
+                <p>
+                    ติดต่อเราได้ที่: 
+                    <a href="https://www.facebook.com/blukahilir" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors duration-300 inline-flex items-center">
+                        <svg class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.505 1.492-3.89 3.777-3.89 1.094 0 2.24.195 2.24.195v2.46h-1.26c-1.243 0-1.63.774-1.63 1.563V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                        </svg>
+                        Persatuan Pemuda Pemudi Blukahilir
+                    </a>
+                </p>
+            </div>
         </div>
     </footer>
 
@@ -192,6 +195,33 @@
         </div>
     </div>
 
+    <!-- ส่วน Modal สำหรับข้อเสนอแนะ/ร้องเรียน -->
+    <div id="report-problem-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div class="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full mx-4 relative">
+            <button id="close-report-modal-button" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <h3 class="text-2xl font-bold mb-6 text-center text-gray-800">ข้อเสนอแนะ/ร้องเรียน</h3>
+            <form id="report-problem-form">
+                <div class="mb-4">
+                    <label for="problem-description" class="block text-sm font-medium text-gray-700 mb-2">กรุณาอธิบายรายละเอียด</label>
+                    <textarea id="problem-description" name="description" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500" required placeholder="ข้อเสนอแนะ หรือปัญหาที่พบ..."></textarea>
+                </div>
+                <div class="mb-6">
+                     <label for="contact-info" class="block text-sm font-medium text-gray-700 mb-2">ข้อมูลติดต่อ (ไม่บังคับ)</label>
+                     <input type="text" id="contact-info" name="contact" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500" placeholder="อีเมลหรือเบอร์โทรศัพท์ของท่าน">
+                </div>
+                <button type="submit" class="w-full bg-green-600 text-white font-semibold py-3 px-4 rounded-full shadow-lg hover:bg-green-700 transition-colors duration-300">
+                    ส่งข้อมูล
+                </button>
+            </form>
+            <p id="report-success-message" class="text-center mt-4 text-sm text-green-600 hidden">ขอบคุณสำหรับข้อมูล! กำลังเปิดโปรแกรมอีเมลของคุณ...</p>
+        </div>
+    </div>
+
+
     <script>
         // Smooth scrolling สำหรับลิงก์นำทาง
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -224,18 +254,13 @@
             const nextButton = document.getElementById('next-button');
 
             if (slideshowImg && prevButton && nextButton) {
-                // Function to update the image
                 const updateImage = () => {
                     slideshowImg.src = images[currentIndex];
                 };
-
-                // Event listener for the 'next' button
                 nextButton.addEventListener('click', () => {
                     currentIndex = (currentIndex + 1) % images.length;
                     updateImage();
                 });
-
-                // Event listener for the 'previous' button
                 prevButton.addEventListener('click', () => {
                     currentIndex = (currentIndex - 1 + images.length) % images.length;
                     updateImage();
@@ -243,7 +268,7 @@
             }
         });
 
-        // การทำงานของ Modal บริจาค
+        // --- การทำงานของ Modal บริจาค ---
         const donateButtonDesktop = document.getElementById('donate-button-desktop');
         const donateButtonMobile = document.getElementById('donate-button-mobile');
         const donationModal = document.getElementById('donation-modal');
@@ -252,39 +277,18 @@
         const accountNumberElement = document.getElementById('account-number');
         const copyMessage = document.getElementById('copy-message');
 
-        // ฟังก์ชันสำหรับเปิด Modal
-        const openModal = () => {
-            donationModal.classList.remove('hidden');
-        };
+        const openModal = () => { donationModal.classList.remove('hidden'); };
+        const closeModal = () => { donationModal.classList.add('hidden'); };
 
-        // ฟังก์ชันสำหรับปิด Modal
-        const closeModal = () => {
-            donationModal.classList.add('hidden');
-        };
-
-        // Event listener สำหรับปุ่มบริจาค
-        if (donateButtonDesktop) {
-            donateButtonDesktop.addEventListener('click', openModal);
-        }
-        if (donateButtonMobile) {
-            donateButtonMobile.addEventListener('click', openModal);
-        }
-
-        // Event listener สำหรับปุ่มปิด Modal
-        if (closeModalButton) {
-            closeModalButton.addEventListener('click', closeModal);
-        }
-
-        // Event listener สำหรับการคลิกนอก Modal เพื่อปิด
+        if (donateButtonDesktop) donateButtonDesktop.addEventListener('click', openModal);
+        if (donateButtonMobile) donateButtonMobile.addEventListener('click', openModal);
+        if (closeModalButton) closeModalButton.addEventListener('click', closeModal);
         if (donationModal) {
             donationModal.addEventListener('click', (e) => {
-                if (e.target.id === 'donation-modal') {
-                    closeModal();
-                }
+                if (e.target.id === 'donation-modal') closeModal();
             });
         }
         
-        // Event listener สำหรับปุ่มคัดลอก
         if (copyButton && accountNumberElement) {
             copyButton.addEventListener('click', () => {
                 const accountNumberText = accountNumberElement.innerText;
@@ -295,14 +299,83 @@
                 document.execCommand('copy');
                 document.body.removeChild(tempInput);
 
-                // แสดงข้อความยืนยันการคัดลอก
                 copyMessage.classList.remove('hidden');
                 setTimeout(() => {
                     copyMessage.classList.add('hidden');
                 }, 2000);
             });
         }
+
+        // --- การทำงานของ Modal ข้อเสนอแนะ/ร้องเรียน ---
+        const reportButtonDesktop = document.getElementById('report-button-desktop');
+        const reportButtonMobile = document.getElementById('report-button-mobile');
+        const reportProblemModal = document.getElementById('report-problem-modal');
+        const closeReportModalButton = document.getElementById('close-report-modal-button');
+        const reportProblemForm = document.getElementById('report-problem-form');
+        const reportSuccessMessage = document.getElementById('report-success-message');
+
+        const openReportModal = () => {
+            reportProblemModal.classList.remove('hidden');
+        };
+
+        const closeReportModal = () => {
+            reportProblemModal.classList.add('hidden');
+            reportSuccessMessage.classList.add('hidden');
+            reportProblemForm.style.display = 'block';
+            reportProblemForm.reset();
+        };
+
+        if (reportButtonDesktop) {
+            reportButtonDesktop.addEventListener('click', openReportModal);
+        }
+        if(reportButtonMobile) {
+            reportButtonMobile.addEventListener('click', openReportModal);
+        }
+        if (closeReportModalButton) {
+            closeReportModalButton.addEventListener('click', closeReportModal);
+        }
+        if (reportProblemModal) {
+            reportProblemModal.addEventListener('click', (e) => {
+                if (e.target.id === 'report-problem-modal') {
+                    closeReportModal();
+                }
+            });
+        }
+
+        if (reportProblemForm) {
+            reportProblemForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                // Get form data
+                const description = document.getElementById('problem-description').value;
+                const contact = document.getElementById('contact-info').value;
+
+                // Construct email body
+                const subject = "ข้อเสนอแนะ/ร้องเรียนจากเว็บไซต์กลุ่มเยาวชนบ้านบลูกาฮีเล";
+                let body = `รายละเอียด:\n${description}\n\n`;
+                if (contact) {
+                    body += `ข้อมูลติดต่อกลับ:\n${contact}`;
+                }
+
+                // Create mailto link
+                const mailtoLink = `mailto:usman.s25429@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                // Show success message
+                reportProblemForm.style.display = 'none';
+                reportSuccessMessage.classList.remove('hidden');
+                
+                // Open email client
+                window.location.href = mailtoLink;
+
+                // Close modal after a delay
+                setTimeout(() => {
+                    closeReportModal();
+                }, 3000);
+            });
+        }
     </script>
+
+
 
 </body>
 </html>
