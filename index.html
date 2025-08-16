@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>กลุ่มเยาวชนบ้านบลูกาฮีเล</title>
+    
     <!-- Favicon -->
     <link rel="icon" href="https://img2.pic.in.th/pic/308586214_175884978343285_6093786348601865226_n-removebg-preview.png" type="image/x-icon">
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
     <style>
-        /* Google Font "Inter" */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* Very light gray background */
+            background-color: #f8fafc;
+        }
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -27,15 +33,16 @@
                 <img src="https://img2.pic.in.th/pic/308586214_175884978343285_6093786348601865226_n-removebg-preview.png" alt="กลุ่มเยาวชนบ้านบลูกาฮีเล Logo" class="h-10">
                 <span class="text-xl font-bold ml-2">กลุ่มเยาวชนบ้านบลูกาฮีเล</span>
             </a>
+            
             <!-- Desktop Navigation Menu -->
             <nav class="hidden md:flex items-center space-x-2">
-    
                 <a href="#about" class="text-gray-600 hover:text-green-600 transition-colors duration-300 px-4 py-2">เกี่ยวกับเรา</a>
                 <a href="#activities" class="text-gray-600 hover:text-green-600 transition-colors duration-300 px-4 py-2">กิจกรรม</a>
                 <a href="#financials" class="text-gray-600 hover:text-green-600 transition-colors duration-300 px-4 py-2">ยอดเงิน</a>
                 <button id="report-button-desktop" class="text-gray-600 font-semibold py-2 px-4 rounded-full hover:bg-gray-100 transition-colors duration-300">ข้อเสนอแนะ/ร้องเรียน</button>
                 <button id="donate-button-desktop" class="bg-green-600 text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-green-700 transition-colors duration-300">บริจาค</button>
             </nav>
+            
             <!-- Mobile Menu Button -->
             <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-green-600 focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -43,6 +50,7 @@
                 </svg>
             </button>
         </div>
+        
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4 px-4">
             <a href="#announcement" class="block py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-300">ประชาสัมพันธ์</a>
@@ -56,322 +64,150 @@
         </div>
     </header>
 
-    <!-- New Announcement Section -->
-    <section id="announcement" class="py-24 px-4 bg-gray-50">
-        <div class="container mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="relative group order-2 md:order-1">
-                    <!-- Image with rounded corners and shadow -->
-                    <img src="https://img5.pic.in.th/file/secure-sv1/Yellow-White-Modern-Ramadan-Iftar-Party-Promotion-Poster-2.png" alt="ภาพประชาสัมพันธ์กิจกรรม" class="rounded-3xl shadow-xl w-full h-auto object-cover transition-all duration-300">
-                </div>
-                <div class="text-center md:text-left order-1 md:order-2">
-                    <h2 class="text-3xl font-bold mb-4 text-gray-800">กิจกรรมดีๆ ที่กำลังจะมาถึง! “นาซิกาบู” </h2>
-                    <p class="text-lg text-gray-600 mb-6">
-                        เชิญพี่น้องผู้มีจิตศรัทธาทุกท่าน ร่วมเป็นส่วนหนึ่งที่ได้สร้างบ้านของอัลลอฮ ในการร่วมบริจากสมทบทุนสร้างมัสยิดอัลฮีลาลียะห์บลูกาฮีเลให้แล้วเสร็จจำนวนเงิน 3,000,000 บาท 
-                    </p>
-                    <!-- ปุ่มสำหรับแสดงรายละเอียดกิจกรรม -->
-                    <button id="show-activity-details-btn" class="inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-green-700 transition-colors duration-300">
-                        ดูรายละเอียดกิจกรรม
-                    </button>
-                </div>
-            </div>
-            <!-- ส่วนที่เพิ่มมา: รายละเอียดกิจกรรมที่ซ่อนอยู่ -->
-            <div id="nasikabu-details" class="hidden w-full mt-12 p-6 bg-white rounded-2xl shadow-xl">
-                <h3 class="text-2xl font-bold text-center mb-4 text-gray-800">เรียนเชิญร่วมงาน “นาซิกาบู”</h3>
-                <div class="text-gray-700 space-y-4">
-                    <p class="text-lg">#ฝากเรียนเชิญพี่น้องผู้มีจิตศรัทธาทุกท่าน ร่วมเป็นส่วนหนึ่งที่ได้สร้างบ้านของอัลลอฮ ในการร่วมบริจากสมทบทุนสร้างมัสยิดอัลฮีลาลียะห์บลูกาฮีเลให้แล้วเสร็จจำนวนเงิน 3,000,000 บาท</p>
-                    <div class="space-y-2">
-                        <p class="font-semibold text-gray-800">ช่องทางรับบริจาค</p>
-                        <p><span class="font-medium text-gray-700">งานนาซิกาบู:</span> วันอาทิตย์ ที่ 7 กันยายน 2568</p>
-                        <p><span class="font-medium text-gray-700">ช่องทางออนไลน์:</span></p>
-                        <ul class="list-disc list-inside ml-4 space-y-1">
-                            <li><span class="font-medium">ธนาคารอิสลาม:</span> <span class="font-bold">0901066346</span> (มัสยิดอัลฮีลาลียะห์)</li>
-                            <li><span class="font-medium">Maybank:</span> <span class="font-bold">557139279538</span> (Usman Sulung)</li>
-                        </ul>
+    <!-- Main Content -->
+    <main>
+        <!-- Announcement Section -->
+        <section id="announcement" class="py-24 px-4 bg-gray-50">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="relative group order-2 md:order-1">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/Yellow-White-Modern-Ramadan-Iftar-Party-Promotion-Poster-2.png" alt="ภาพประชาสัมพันธ์กิจกรรม" class="rounded-3xl shadow-xl w-full h-auto object-cover">
                     </div>
-                    <p>
-                        <span class="font-semibold text-gray-800">ติดต่อ:</span>
-                        087-9887940, 081-0964882
-                    </p>
-                    <p>
-                        <span class="font-semibold text-gray-800">ที่อยู่:</span>
-                        อีหม่าม ประจำมัสยิดอัลฮีลาลียะห์ บลูกาฮีเล ต.บาตง อ.รือเสาะ จ.นราธิวาส 96250
-                    </p>
-                    <p class="text-center font-normal text-gray-500 text-sm mt-4">
-                        دأتس سوكوڠن دان بنتوان سودارا/سوداري كامي مڠوچفكن جوتأن تريما كاسيه. دڠن ايمان دان كرجا سام كالي اين سموڬ اللّٰه ممبالس سموا كبأيكن اين دڠن ڬنجاران تربأيك آمين يارب العالمين........
-                    </p>
-                    <p class="text-center text-gray-700 font-medium">
-                        ขออัลลอฮฺทรงประทานความเมตตา ความโปรดปรานและริสกีที่ดีทั้งหลายมาสู่ทาน
-                    </p>
-                    <p class="text-center text-green-600 font-extrabold text-xl">
-                        جزاك الله خيرالجزاء+_+
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Us Section -->
-    <section id="about" class="py-24 px-4 bg-white">
-        <div class="container mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="text-center md:text-left">
-                    <h2 class="text-3xl font-bold mb-4 text-green-600">เกี่ยวกับเรา</h2>
-                    <p class="text-lg text-gray-600 mb-6">
-                        เป็นการรวมกลุ่มของเยาวชนบ้านบลูกาฮีเล ต.บาตง อ.รือเสาะ จ.นราธิวาส เพื่อช่วยเหลือชุมชนในด้านต่างๆ ไม่ว่าจะเป็นความเป็นอยู่ ความรู้ และกิจกรรมสังคม โดยมีเป้าหมายเพื่อสร้างความรัก ความสามัคคี และพัฒนาชุมชนให้ก้าวหน้ายิ่งขึ้น
-                    </p>
-                </div>
-                <div class="relative group">
-                    <img id="about-slideshow-img" src="https://img5.pic.in.th/file/secure-sv1/470562478_122202907688076485_1775899940913794192_n.jpg" alt="ภาพกิจกรรม" class="rounded-3xl shadow-xl w-full h-auto object-cover transition-all duration-300">
-                    <!-- Image navigation buttons -->
-                    <button id="prev-button" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 text-gray-800 p-2 rounded-full shadow-lg transition-all duration-300 opacity-0 group-hover:opacity-100 hover:bg-white focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                        </svg>
-                    </button>
-                    <button id="next-button" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 text-gray-800 p-2 rounded-full shadow-lg transition-all duration-300 opacity-0 group-hover:opacity-100 hover:bg-white focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Activities Section -->
-    <section id="activities" class="py-24 px-4 bg-gray-50">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-12 text-gray-800">กิจกรรมของเรา</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Activity Card 1 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/520173233_771203252144785_6022430290871095271_n.jpg" alt="กิจกรรม Maal Hijrah ครั้งที่ 2" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">กิจกรรม Maal Hijrah ครั้งที่ 1</h3>
-                        <p class="text-gray-600 text-sm">
-                            ร่วมกันกวนขนมอาซูรอ แข่งกีฬาพื้นบ้าน สมทบทุนเพื่อตาดีกา
+                    <div class="text-center md:text-left order-1 md:order-2">
+                        <h2 class="text-3xl font-bold mb-4 text-gray-800">กิจกรรมดีๆ ที่กำลังจะมาถึง! “นาซิกาบู” </h2>
+                        <p class="text-lg text-gray-600 mb-6">
+                            เชิญพี่น้องผู้มีจิตศรัทธาทุกท่าน ร่วมเป็นส่วนหนึ่งที่ได้สร้างบ้านของอัลลอฮ ในการร่วมบริจากสมทบทุนสร้างมัสยิดอัลฮีลาลียะห์บลูกาฮีเลให้แล้วเสร็จจำนวนเงิน 3,000,000 บาท 
                         </p>
+                        <button id="show-activity-details-btn" class="inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-green-700 transition-colors duration-300">
+                            ดูรายละเอียดกิจกรรม
+                        </button>
                     </div>
                 </div>
-                <!-- Activity Card 2 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
-                    <img src="https://img2.pic.in.th/pic/hij16bdba223f949ba34.jpg" alt="โครงการฟื้นฟูหลังน้ำท่วม" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">กิจกรรม Maal Hijrah ครั้งที่ 2</h3>
-                        <p class="text-gray-600 text-sm">
-                            ร่วมกันกวนขนมอาซูรอ แข่งกีฬาพื้นบ้าน มอบรายได้ทั้งหมดให้ตาดีกาสร้างห้องเก็บของ ยกสูงช่วงน้ำท่วม
-                        </p>
-                    </div>
-                </div>
-
-
-<!-- Activity Card 3 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/135568822_826600368071427_6861906994842173809_n.jpg" alt="โครงการฟื้นฟูหลังน้ำท่วม" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">ช่วยเหลือน้ำท่วม</h3>
-                        <p class="text-gray-600 text-sm">
-                            ลงพื้นที่ซ่อมแซ่ม ช่วยเหลือ อพยบ มอบถุงยังชีพให้กับคนในชุมชนที่โดนน้ำท่วม
-                        </p>
-                    </div>
-                </div>
-
-<!-- Activity Card 2 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
-                    <img src="https://img2.pic.in.th/pic/533c1213d6b15eaf460a66e9b3b96882.jpg" alt="โครงการฟื้นฟูหลังน้ำท่วม" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">พัฒนากูโบร์</h3>
-                        <p class="text-gray-600 text-sm">
-                            ทีมงานผู้ใหญ่บ้านพร้อมประชาชนและกลุ่มยาวชน ออกมาทำความสะอาดบริเวณกูโบร์(สุสาน)
-                        </p>
-                    </div>
-                </div>
-
-<!-- Activity Card 2 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/485365764_679147898016988_3371303287888153684_n.jpg" alt="โครงการฟื้นฟูหลังน้ำท่วม" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">สมทบทุนจัดซื้อเครื่องเสียงให้บาลาเซาะ  </h3>
-                        <p class="text-gray-600 text-sm">
-                            สมทบทุนจัดซื้อเครื่องเสียงให้บาลาเซาะ  
-     เพื่อจัดการเรียนการสอนกีตาบและละหมาดตะรอเวียะห์ในรอม                
-     ฎอน
-                        </p>
-                    </div>
-                </div>
-<!-- Activity Card 2 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
-                    <img src="https://img2.pic.in.th/pic/484627700_676090888322689_6120148654178532626_n.jpg" alt="โครงการฟื้นฟูหลังน้ำท่วม" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">ทีมเยาวชนนำวัสดุเหลือใช้ประยุกต์เป็นกลอง</h3>
-                        <p class="text-gray-600 text-sm">
-                            เข้าร่วมกิจกรรมกับ อบต บาตง
-                        </p>
-                    </div>
-                </div>
-<!-- Activity Card 2 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
-                    <img src="https://img2.pic.in.th/pic/484743360_675816978350080_9096007120174579989_n.jpg" alt="โครงการฟื้นฟูหลังน้ำท่วม" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">แข่งขันกีฬา อบต </h3>
-                        <p class="text-gray-600 text-sm">
-                            กีฬาต้านภัยยาเสพติด บอลา อบต 
-                        </p>
-                    </div>
-                </div>
-<!-- Activity Card 2 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/481078111_966959192210436_698464691255527536_n.jpg" alt="โครงการฟื้นฟูหลังน้ำท่วม" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">มอบทุนการศึกษาให้เด็กกำพร้า Pemuda Teloksa x Blukahilir </h3>
-                        <p class="text-gray-600 text-sm">
-                            มอบทุนการศึกษาให้เด็กกำพร้าโดยการร่วมมือกันระหว่าง Pemuda Teloksa x Blukahilir  
-                        </p>
-                    </div>
-                </div>
-
-
-<!-- Activity Card 2 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/470562478_122202907688076485_1775899940913794192_n.jpg" alt="โครงการฟื้นฟูหลังน้ำท่วม" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">สำรวจพื้นที่จุดชมวิวทะเลหมอก Bukit Lebea</h3>
-                        <p class="text-gray-600 text-sm">
-                            กลุ่มเยาวชนสำรวจพื้นที่และพัฒนาพื้นที่ เพื่อเปิดสถานที่ท่องเที่ยวชุมชน ชมวิวทะเลหมอกและบริการจุดตั้งแคมป์
-                        </p>
-                    </div>
-                </div>
-<!-- Activity Card 2 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/481448954_663255036272941_6593812244195255968_n.jpg" alt="โครงการฟื้นฟูหลังน้ำท่วม" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">ลงพื้นที่ตรวจเยี่ยมกลุ่ม"เปราะบาง"</h3>
-                        <p class="text-gray-600 text-sm">
-                            ตัวแทนเยาวชนลงพื้นที่ในชุมชนเพื่อมอบถุงยังชีพและสอบถามความเป็นอยู่ของกลุ่มเปราะบาง
-                        </p>
-                    </div>
-                </div>
-
-
-
-<!-- Activity Card 2 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
-                    <img src="https://img5.pic.in.th/file/secure-sv1/473544649_1713950519336403_7948745474257964615_n.jpg" alt="โครงการฟื้นฟูหลังน้ำท่วม" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">ได้รับโล่รางวัลส่งแข่งกันในงาน เที่ยวเท่ที่บาตง ครั้งที่ 1"</h3>
-                        <p class="text-gray-600 text-sm">
-                            ตัวแทนเยาวชนส่งประกวดภาพถ่าย วิถีชุมชน
-                        </p>
-                    </div>
-                </div>
-
-
-
-<!-- Activity Card 2 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
-                    <img src="https://img2.pic.in.th/pic/470192177_1693311101400345_2482064489225286520_n.jpg" alt="โครงการฟื้นฟูหลังน้ำท่วม" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">ร่วมประชุมกับหน่วยงาน มูลนิธิอัล-อุมมะห์ เพื่อการศึกษาและพัฒนาเด็กด้อยโอกาส เพื่อลง</h3>
-                        <p class="text-gray-600 text-sm">
-                            กลุ่มเยาวชนบ้านบลูกาฮีเล ได้เข้าร่วมประชุมและรับมอบกระเป๋ากับหน่วยงาน มูลนิธิอัล-อุมมะห์ เพื่อการศึกษาและพัฒนาเด็กด้อยโอกาส เพื่อลงพื้นที่แจกเป็นของขวัญให้น้องๆ เด็กกำพร้าและยากจน
-                        </p>
-                    </div>
-                </div>
-
-
-<!-- Activity Card 2 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
-                    <img src="https://img2.pic.in.th/pic/123993539_788589795205818_2848445947666845429_n.jpg" alt="โครงการฟื้นฟูหลังน้ำท่วม" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">มอบทุนอาหารกลางวันให้ ตาดีกา</h3>
-                        <p class="text-gray-600 text-sm">
-                            กลุ่มเยาวชนบ้านบลูกาฮีเล ได้มอบทุนอาหารกลางให้กับน้องๆ ตาดีกาจำนวน  15,550 บาท
-                        </p>
-                    </div>
-                </div>
-
-
-
-
-
-                <!-- Activity Card 4 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
-                    <img src="https://scontent-sin2-3.xx.fbcdn.net/v/t1.6435-9/91637401_633181190746680_2575753198069350400_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=_HIcXO4zYg0Q7kNvwEH2-E7&_nc_oc=AdnrANHpiJynvvfqPlAvfDWNYn8zhkhy3bWLRbz0W67fW-dMNusiodU16O1BS1p9_II&_nc_zt=23&_nc_ht=scontent-sin2-3.xx&_nc_gid=hTf6sqWwFXmL3LN2AQHyiQ&oh=00_AfXBVCNgO6DoDj1rReVk7d39gtiRdLrlVFYqO4ZkmdLbDg&oe=68BEA8E5" alt="กิจกรรมสร้างบ้าน" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">บลูกาฮีเลห่างไกล Covid 19</h3>
-                        <p class="text-gray-600 text-sm">
-                            ให้ความรู้เกี่ยวกับการใช้ชีวิตช่วง Covid 19
-                        </p>
+                <!-- Hidden Activity Details -->
+                <div id="nasikabu-details" class="hidden w-full mt-12 p-6 bg-white rounded-2xl shadow-xl">
+                    <h3 class="text-2xl font-bold text-center mb-4 text-gray-800">เรียนเชิญร่วมงาน “นาซิกาบู”</h3>
+                    <div class="text-gray-700 space-y-4">
+                        <p class="text-lg">#ฝากเรียนเชิญพี่น้องผู้มีจิตศรัทธาทุกท่าน ร่วมเป็นส่วนหนึ่งที่ได้สร้างบ้านของอัลลอฮ ในการร่วมบริจากสมทบทุนสร้างมัสยิดอัลฮีลาลียะห์บลูกาฮีเลให้แล้วเสร็จจำนวนเงิน 3,000,000 บาท</p>
+                        <div class="space-y-2">
+                            <p class="font-semibold text-gray-800">ช่องทางรับบริจาค</p>
+                            <p><span class="font-medium text-gray-700">งานนาซิกาบู:</span> วันอาทิตย์ ที่ 7 กันยายน 2568</p>
+                            <p><span class="font-medium text-gray-700">ช่องทางออนไลน์:</span></p>
+                            <ul class="list-disc list-inside ml-4 space-y-1">
+                                <li><span class="font-medium">ธนาคารอิสลาม:</span> <span class="font-bold">0901066346</span> (มัสยิดอัลฮีลาลียะห์)</li>
+                                <li><span class="font-medium">Maybank:</span> <span class="font-bold">557139279538</span> (Usman Sulung)</li>
+                            </ul>
+                        </div>
+                        <p><span class="font-semibold text-gray-800">ติดต่อ:</span> 087-9887940, 081-0964882</p>
+                        <p><span class="font-semibold text-gray-800">ที่อยู่:</span> อีหม่าม ประจำมัสยิดอัลฮีลาลียะห์ บลูกาฮีเล ต.บาตง อ.รือเสาะ จ.นราธิวาส 96250</p>
+                        <p class="text-center font-normal text-gray-500 text-sm mt-4">دأتس سوكوڠن دان بنتوان سودارا/سوداري كامي مڠوچفكن جوتأن تريما كاسيه. دڠن ايمان دان كرجا سام كالي اين سموڬ اللّٰه ممبالس سموا كبأيكن اين دڠن ڬنجاران تربأيك آمين يارب العالمين........</p>
+                        <p class="text-center text-gray-700 font-medium">ขออัลลอฮฺทรงประทานความเมตตา ความโปรดปรานและริสกีที่ดีทั้งหลายมาสู่ทาน</p>
+                        <p class="text-center text-green-600 font-extrabold text-xl">جزاك الله خيرالجزاء+_+</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Financials Section -->
-    <section id="financials" class="py-24 px-4 bg-white">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800">ยอดเงินขององค์กร</h2>
-            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-10">
-                เรายึดมั่นในความโปร่งใสในการจัดการเงินบริจาคทุกบาททุกสตางค์ เพื่อให้แน่ใจว่าเงินทุกส่วนถูกนำไปใช้เพื่อประโยชน์สูงสุดของสังคม
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-100 p-8 rounded-2xl shadow-sm border-l-4 border-green-600">
-                    <p class="text-sm text-gray-500 font-medium">ยอดเงินบริจาคทั้งหมด</p>
-                    <p class="text-4xl font-bold mt-2 text-green-600">ข้อมูลจะถูกอัพเดทเร็วๆ นี้</p>
-                    <p class="text-gray-500">บาท</p>
-                </div>
-                <div class="bg-gray-100 p-8 rounded-2xl shadow-sm border-l-4 border-green-600">
-                    <p class="text-sm text-gray-500 font-medium">ใช้ไปกับโครงการ</p>
-                    <p class="text-4xl font-bold mt-2 text-green-600">ข้อมูลจะถูกอัพเดทเร็วๆ นี้</p>
-                    <p class="text-gray-500">บาท</p>
-                </div>
-                <div class="bg-gray-100 p-8 rounded-2xl shadow-sm border-l-4 border-red-600">
-                    <p class="text-sm text-gray-500 font-medium">ยอดเงินคงเหลือ</p>
-                    <p class="text-4xl font-bold mt-2 text-red-600">ข้อมูลจะถูกอัพเดทเร็วๆ นี้</p>
-                    <p class="text-gray-500">บาท</p>
+        <!-- About Us Section -->
+        <section id="about" class="py-24 px-4 bg-white">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="text-center md:text-left">
+                        <h2 class="text-3xl font-bold mb-4 text-green-600">เกี่ยวกับเรา</h2>
+                        <p class="text-lg text-gray-600 mb-6">
+                            เป็นการรวมกลุ่มของเยาวชนบ้านบลูกาฮีเล ต.บาตง อ.รือเสาะ จ.นราธิวาส เพื่อช่วยเหลือชุมชนในด้านต่างๆ ไม่ว่าจะเป็นความเป็นอยู่ ความรู้ และกิจกรรมสังคม โดยมีเป้าหมายเพื่อสร้างความรัก ความสามัคคี และพัฒนาชุมชนให้ก้าวหน้ายิ่งขึ้น
+                        </p>
+                    </div>
+                    <!-- YouTube Video Embed -->
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe class="w-full h-full rounded-3xl shadow-xl" src="https://www.youtube.com/embed/d9Q5upReS00?si=Y-uQUprEkVZj02yq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Activities Section -->
+        <section id="activities" class="py-24 px-4 bg-gray-50">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-12 text-gray-800">กิจกรรมของเรา</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Activity Cards -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/520173233_771203252144785_6022430290871095271_n.jpg" alt="กิจกรรม Maal Hijrah ครั้งที่ 1" class="w-full h-48 object-cover">
+                        <div class="p-6"><h3 class="text-xl font-semibold mb-2">กิจกรรม Maal Hijrah ครั้งที่ 1</h3><p class="text-gray-600 text-sm">ร่วมกันกวนขนมอาซูรอ แข่งกีฬาพื้นบ้าน สมทบทุนเพื่อตาดีกา</p></div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
+                        <img src="https://img2.pic.in.th/pic/hij16bdba223f949ba34.jpg" alt="กิจกรรม Maal Hijrah ครั้งที่ 2" class="w-full h-48 object-cover">
+                        <div class="p-6"><h3 class="text-xl font-semibold mb-2">กิจกรรม Maal Hijrah ครั้งที่ 2</h3><p class="text-gray-600 text-sm">ร่วมกันกวนขนมอาซูรอ แข่งกีฬาพื้นบ้าน มอบรายได้ทั้งหมดให้ตาดีกาสร้างห้องเก็บของ ยกสูงช่วงน้ำท่วม</p></div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/135568822_826600368071427_6861906994842173809_n.jpg" alt="ช่วยเหลือน้ำท่วม" class="w-full h-48 object-cover">
+                        <div class="p-6"><h3 class="text-xl font-semibold mb-2">ช่วยเหลือน้ำท่วม</h3><p class="text-gray-600 text-sm">ลงพื้นที่ซ่อมแซ่ม ช่วยเหลือ อพยบ มอบถุงยังชีพให้กับคนในชุมชนที่โดนน้ำท่วม</p></div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
+                        <img src="https://img2.pic.in.th/pic/533c1213d6b15eaf460a66e9b3b96882.jpg" alt="พัฒนากูโบร์" class="w-full h-48 object-cover">
+                        <div class="p-6"><h3 class="text-xl font-semibold mb-2">พัฒนากูโบร์</h3><p class="text-gray-600 text-sm">ทีมงานผู้ใหญ่บ้านพร้อมประชาชนและกลุ่มยาวชน ออกมาทำความสะอาดบริเวณกูโบร์(สุสาน)</p></div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/485365764_679147898016988_3371303287888153684_n.jpg" alt="สมทบทุนจัดซื้อเครื่องเสียง" class="w-full h-48 object-cover">
+                        <div class="p-6"><h3 class="text-xl font-semibold mb-2">สมทบทุนจัดซื้อเครื่องเสียงให้บาลาเซาะ</h3><p class="text-gray-600 text-sm">สมทบทุนจัดซื้อเครื่องเสียงให้บาลาเซาะ เพื่อจัดการเรียนการสอนกีตาบและละหมาดตะรอเวียะห์ในรอมฎอน</p></div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
+                        <img src="https://img2.pic.in.th/pic/484627700_676090888322689_6120148654178532626_n.jpg" alt="ประยุกต์เป็นกลอง" class="w-full h-48 object-cover">
+                        <div class="p-6"><h3 class="text-xl font-semibold mb-2">ทีมเยาวชนนำวัสดุเหลือใช้ประยุกต์เป็นกลอง</h3><p class="text-gray-600 text-sm">เข้าร่วมกิจกรรมกับ อบต บาตง</p></div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
+                        <img src="https://img2.pic.in.th/pic/484743360_675816978350080_9096007120174579989_n.jpg" alt="แข่งขันกีฬา อบต" class="w-full h-48 object-cover">
+                        <div class="p-6"><h3 class="text-xl font-semibold mb-2">แข่งขันกีฬา อบต</h3><p class="text-gray-600 text-sm">กีฬาต้านภัยยาเสพติด บอลา อบต</p></div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/481078111_966959192210436_698464691255527536_n.jpg" alt="มอบทุนการศึกษา" class="w-full h-48 object-cover">
+                        <div class="p-6"><h3 class="text-xl font-semibold mb-2">มอบทุนการศึกษาให้เด็กกำพร้า</h3><p class="text-gray-600 text-sm">มอบทุนการศึกษาให้เด็กกำพร้าโดยการร่วมมือกันระหว่าง Pemuda Teloksa x Blukahilir</p></div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/470562478_122202907688076485_1775899940913794192_n.jpg" alt="สำรวจพื้นที่จุดชมวิว" class="w-full h-48 object-cover">
+                        <div class="p-6"><h3 class="text-xl font-semibold mb-2">สำรวจพื้นที่จุดชมวิวทะเลหมอก Bukit Lebea</h3><p class="text-gray-600 text-sm">กลุ่มเยาวชนสำรวจพื้นที่และพัฒนาพื้นที่ เพื่อเปิดสถานที่ท่องเที่ยวชุมชน ชมวิวทะเลหมอกและบริการจุดตั้งแคมป์</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Financials Section -->
+        <section id="financials" class="py-24 px-4 bg-white">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">ยอดเงินขององค์กร</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-10">
+                    เรายึดมั่นในความโปร่งใสในการจัดการเงินบริจาคทุกบาททุกสตางค์ เพื่อให้แน่ใจว่าเงินทุกส่วนถูกนำไปใช้เพื่อประโยชน์สูงสุดของสังคม
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-100 p-8 rounded-2xl shadow-sm border-l-4 border-green-600">
+                        <p class="text-sm text-gray-500 font-medium">ยอดเงินบริจาคทั้งหมด</p>
+                        <p class="text-4xl font-bold mt-2 text-green-600">ข้อมูลจะถูกอัพเดทเร็วๆ นี้</p>
+                        <p class="text-gray-500">บาท</p>
+                    </div>
+                    <div class="bg-gray-100 p-8 rounded-2xl shadow-sm border-l-4 border-green-600">
+                        <p class="text-sm text-gray-500 font-medium">ใช้ไปกับโครงการ</p>
+                        <p class="text-4xl font-bold mt-2 text-green-600">ข้อมูลจะถูกอัพเดทเร็วๆ นี้</p>
+                        <p class="text-gray-500">บาท</p>
+                    </div>
+                    <div class="bg-gray-100 p-8 rounded-2xl shadow-sm border-l-4 border-red-600">
+                        <p class="text-sm text-gray-500 font-medium">ยอดเงินคงเหลือ</p>
+                        <p class="text-4xl font-bold mt-2 text-red-600">ข้อมูลจะถูกอัพเดทเร็วๆ นี้</p>
+                        <p class="text-gray-500">บาท</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer Section -->
     <footer class="bg-gray-800 text-gray-300 py-10 px-4">
         <div class="container mx-auto text-center">
             <p>&copy; 2025 กลุ่มเยาวชนบ้านบลูกาฮีเล. สงวนลิขสิทธิ์</p>
-            <!-- Facebook Contact -->
             <div class="mt-4">
                 <p>
                     ติดต่อเราได้ที่:
                     <a href="https://www.facebook.com/blukahilir" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors duration-300 inline-flex items-center">
-                        <svg class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.505 1.492-3.89 3.777-3.89 1.094 0 2.24.195 2.24.195v2.46h-1.26c-1.243 0-1.63.774-1.63 1.563V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
-                        </svg>
+                        <svg class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.505 1.492-3.89 3.777-3.89 1.094 0 2.24.195 2.24.195v2.46h-1.26c-1.243 0-1.63.774-1.63 1.563V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
                         Persatuan Pemuda Pemudi Blukahilir
                     </a>
                 </p>
@@ -379,248 +215,108 @@
         </div>
     </footer>
 
-    <!-- Donation Modal -->
+    <!-- Modals (Donation and Report) -->
     <div id="donation-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
         <div class="bg-white p-8 rounded-2xl shadow-xl max-w-sm w-full mx-4 relative">
-            <button id="close-modal-button" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
+            <button id="close-modal-button" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
             <h3 class="text-2xl font-bold mb-4 text-center text-green-600">ข้อมูลบัญชีธนาคารเพื่อการบริจาค</h3>
             <div class="space-y-4">
-                <div class="border border-gray-200 p-4 rounded-xl">
-                    <p class="text-sm font-medium text-gray-500">ธนาคาร</p>
-                    <p class="text-lg font-semibold text-gray-800">ธนาคารอิสลาม:</p>
+                <div class="border p-4 rounded-xl"><p class="text-sm text-gray-500">ธนาคาร</p><p class="text-lg font-semibold">ธนาคารอิสลาม:</p></div>
+                <div class="border p-4 rounded-xl flex items-center justify-between">
+                    <div><p class="text-sm text-gray-500">เลขที่บัญชี</p><p id="account-number" class="text-lg font-semibold">0901066346</p></div>
+                    <button id="copy-account-number" class="bg-green-600 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-green-700">คัดลอก</button>
                 </div>
-                <div class="border border-gray-200 p-4 rounded-xl flex items-center justify-between">
-                    <div>
-                        <p class="text-sm font-medium text-gray-500">เลขที่บัญชี</p>
-                        <p id="account-number" class="text-lg font-semibold text-gray-800">0901066346</p>
-                    </div>
-                    <button id="copy-account-number" class="bg-green-600 text-white text-sm font-semibold py-2 px-4 rounded-full hover:bg-green-700 transition-colors duration-300 focus:outline-none">
-                        คัดลอก
-                    </button>
-                </div>
-                <div class="border border-gray-200 p-4 rounded-xl">
-                    <p class="text-sm font-medium text-gray-500">ชื่อบัญชี</p>
-                    <p class="text-lg font-semibold text-gray-800">มัสยิดอัลฮีลาลียะห์</p>
-                </div>
+                <div class="border p-4 rounded-xl"><p class="text-sm text-gray-500">ชื่อบัญชี</p><p class="text-lg font-semibold">มัสยิดอัลฮีลาลียะห์</p></div>
             </div>
             <p id="copy-message" class="text-center mt-4 text-sm text-green-600 hidden">คัดลอกเรียบร้อยแล้ว!</p>
         </div>
     </div>
 
-    <!-- Report/Feedback Modal -->
     <div id="report-problem-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
         <div class="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full mx-4 relative">
-            <button id="close-report-modal-button" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
+            <button id="close-report-modal-button" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
             <h3 class="text-2xl font-bold mb-6 text-center text-gray-800">ข้อเสนอแนะ/ร้องเรียน</h3>
             <form id="report-problem-form">
                 <div class="mb-4">
                     <label for="problem-description" class="block text-sm font-medium text-gray-700 mb-2">กรุณาอธิบายรายละเอียด</label>
-                    <textarea id="problem-description" name="description" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500" required placeholder="ข้อเสนอแนะ หรือปัญหาที่พบ..."></textarea>
+                    <textarea id="problem-description" name="description" rows="4" class="w-full p-3 border rounded-lg" required placeholder="ข้อเสนอแนะ หรือปัญหาที่พบ..."></textarea>
                 </div>
                 <div class="mb-6">
                     <label for="contact-info" class="block text-sm font-medium text-gray-700 mb-2">ข้อมูลติดต่อ (ไม่บังคับ)</label>
-                    <input type="text" id="contact-info" name="contact" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500" placeholder="อีเมลหรือเบอร์โทรศัพท์ของท่าน">
+                    <input type="text" id="contact-info" name="contact" class="w-full p-3 border rounded-lg" placeholder="อีเมลหรือเบอร์โทรศัพท์ของท่าน">
                 </div>
-                <button type="submit" class="w-full bg-green-600 text-white font-semibold py-3 px-4 rounded-full shadow-lg hover:bg-green-700 transition-colors duration-300">
-                    ส่งข้อมูล
-                </button>
+                <button type="submit" class="w-full bg-green-600 text-white font-semibold py-3 rounded-full shadow-lg hover:bg-green-700">ส่งข้อมูล</button>
             </form>
             <p id="report-success-message" class="text-center mt-4 text-sm text-green-600 hidden">ขอบคุณสำหรับข้อมูล! กำลังเปิดโปรแกรมอีเมลของคุณ...</p>
         </div>
     </div>
 
-
+    <!-- JavaScript -->
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                document.querySelector(targetId).scrollIntoView({
-                    behavior: 'smooth'
-                });
-
-                // Close mobile menu after clicking a link
-                const mobileMenu = document.getElementById('mobile-menu');
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-        });
-
-        // Toggle mobile menu state
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Slideshow for 'About Us' section with navigation buttons
         document.addEventListener('DOMContentLoaded', () => {
-            const images = [
-                'https://scontent-sin6-3.xx.fbcdn.net/v/t39.30808-6/520173233_771203252144785_6022430290871095271_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=e2nfsEHfbCoQ7kNvwHT_dDM&_nc_oc=AdlicaPno_IsAOReeOSMzNT7ASlSByd-XairtgKQ30VQKLmvJGFFtCe8ebwQopjOiJc&_nc_zt=23&_nc_ht=scontent-sin6-3.xx&_nc_gid=ix3c2_EniHSAFzkcIzG9OQ&oh=00_AfUdN6ZDjuZMbnhRNvSWTqD_UbdU031GvjNYx18pdQv2HA&oe=689D0BB9',
-                'https://scontent-sin11-2.xx.fbcdn.net/v/t39.30808-6/484290310_673700455228399_556552215195158014_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Hq62tiSJzUAQ7kNvwEtjAxi&_nc_oc=AdkAnY86lqzNuEw-DhKSTh-KKQv8qc4EmU8F28nXU4eFaPJiaUm1gxm1g2vwrNKPNrY&_nc_zt=23&_nc_ht=scontent-sin11-2.xx&_nc_gid=tvRMxgmwczYN36Actcucww&oh=00_AfWOiiRizNtZsjMJHZVz0ft42Xctvn-thOtM0Lcx8iXhKQ&oe=689D0E11',
-                'https://scontent-sin2-3.xx.fbcdn.net/v/t1.6435-9/91637401_633181190746680_2575753198069350400_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=_HIcXO4zYg0Q7kNvwEH2-E7&_nc_oc=AdnrANHpiJynvvfqPlAvfDWNYn8zhkhy3bWLRbz0W67fW-dMNusiodU16O1BS1p9_II&_nc_zt=23&_nc_ht=scontent-sin2-3.xx&_nc_gid=hTf6sqWwFXmL3LN2AQHyiQ&oh=00_AfXBVCNgO6DoDj1rReVk7d39gtiRdLrlVFYqO4ZkmdLbDg&oe=68BEA8E5',
-                'https://scontent.fkul10-1.fna.fbcdn.net/v/t39.30808-6/525604054_778299151435195_6940277310523243375_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=NCv88iNneI0Q7kNvwEQqkNv&_nc_oc=AdmUJDuA-71WW1_jAhxceANUBNifq2n-hG92f4gWQcYftPA_6Bs3QPJFpdx7Xa6h5Qk&_nc_zt=23&_nc_ht=scontent.fkul10-1.fna&_nc_gid=2aK4lyPXGFCmxrzISE5dbQ&oh=00_AfVC4gF8bKk9KUAGRuY9Q0-hgNLIVNsdQWglZfJZ-VRC8Q&oe=689E9C5C',
-                'https://placehold.co/1920x1080/E5F1E5/FFFFFF?text=Another+Community+Activity'
-            ];
-            let currentIndex = 0;
-            const slideshowImg = document.getElementById('about-slideshow-img');
-            const prevButton = document.getElementById('prev-button');
-            const nextButton = document.getElementById('next-button');
+            // --- Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
 
-            if (slideshowImg && prevButton && nextButton) {
-                const updateImage = () => {
-                    slideshowImg.src = images[currentIndex];
-                };
-                nextButton.addEventListener('click', () => {
-                    currentIndex = (currentIndex + 1) % images.length;
-                    updateImage();
+            // --- Smooth Scrolling & Close Mobile Menu ---
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', () => {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
                 });
-                prevButton.addEventListener('click', () => {
-                    currentIndex = (currentIndex - 1 + images.length) % images.length;
-                    updateImage();
-                });
-            }
-        });
-
-        // --- Donation Modal Functionality ---
-        const donateButtonDesktop = document.getElementById('donate-button-desktop');
-        const donateButtonMobile = document.getElementById('donate-button-mobile');
-        const donationModal = document.getElementById('donation-modal');
-        const closeModalButton = document.getElementById('close-modal-button');
-        const copyButton = document.getElementById('copy-account-number');
-        const accountNumberElement = document.getElementById('account-number');
-        const copyMessage = document.getElementById('copy-message');
-
-        const openModal = () => { donationModal.classList.remove('hidden'); };
-        const closeModal = () => { donationModal.classList.add('hidden'); };
-
-        if (donateButtonDesktop) donateButtonDesktop.addEventListener('click', openModal);
-        if (donateButtonMobile) donateButtonMobile.addEventListener('click', openModal);
-        if (closeModalButton) closeModalButton.addEventListener('click', closeModal);
-        if (donationModal) {
-            donationModal.addEventListener('click', (e) => {
-                if (e.target.id === 'donation-modal') closeModal();
             });
-        }
-        
-        if (copyButton && accountNumberElement) {
-            copyButton.addEventListener('click', () => {
-                const accountNumberText = accountNumberElement.innerText;
-                const tempInput = document.createElement('textarea');
-                tempInput.value = accountNumberText;
+            
+            // --- Show Activity Details ---
+            document.getElementById('show-activity-details-btn').addEventListener('click', () => {
+                document.getElementById('nasikabu-details').classList.toggle('hidden');
+            });
+
+            // --- Modal Handling ---
+            const donationModal = document.getElementById('donation-modal');
+            const reportModal = document.getElementById('report-problem-modal');
+            const openDonationButtons = [document.getElementById('donate-button-desktop'), document.getElementById('donate-button-mobile')];
+            const openReportButtons = [document.getElementById('report-button-desktop'), document.getElementById('report-button-mobile')];
+            
+            openDonationButtons.forEach(btn => btn.addEventListener('click', () => donationModal.classList.remove('hidden')));
+            openReportButtons.forEach(btn => btn.addEventListener('click', () => reportModal.classList.remove('hidden')));
+            
+            document.getElementById('close-modal-button').addEventListener('click', () => donationModal.classList.add('hidden'));
+            document.getElementById('close-report-modal-button').addEventListener('click', () => reportModal.classList.add('hidden'));
+
+            // --- Copy Account Number ---
+            document.getElementById('copy-account-number').addEventListener('click', () => {
+                const accountNumber = document.getElementById('account-number').innerText;
+                const tempInput = document.createElement('input');
                 document.body.appendChild(tempInput);
+                tempInput.value = accountNumber;
                 tempInput.select();
                 document.execCommand('copy');
                 document.body.removeChild(tempInput);
 
+                const copyMessage = document.getElementById('copy-message');
                 copyMessage.classList.remove('hidden');
-                setTimeout(() => {
-                    copyMessage.classList.add('hidden');
-                }, 2000);
+                setTimeout(() => copyMessage.classList.add('hidden'), 2000);
             });
-        }
-
-        // --- Report/Feedback Modal Functionality ---
-        const reportButtonDesktop = document.getElementById('report-button-desktop');
-        const reportButtonMobile = document.getElementById('report-button-mobile');
-        const reportProblemModal = document.getElementById('report-problem-modal');
-        const closeReportModalButton = document.getElementById('close-report-modal-button');
-        const reportProblemForm = document.getElementById('report-problem-form');
-        const reportSuccessMessage = document.getElementById('report-success-message');
-
-        const openReportModal = () => {
-            reportProblemModal.classList.remove('hidden');
-        };
-
-        const closeReportModal = () => {
-            reportProblemModal.classList.add('hidden');
-            reportSuccessMessage.classList.add('hidden');
-            reportProblemForm.style.display = 'block';
-            reportProblemForm.reset();
-        };
-
-        if (reportButtonDesktop) {
-            reportButtonDesktop.addEventListener('click', openReportModal);
-        }
-        if(reportButtonMobile) {
-            reportButtonMobile.addEventListener('click', openReportModal);
-        }
-        if (closeReportModalButton) {
-            closeReportModalButton.addEventListener('click', closeReportModal);
-        }
-        if (reportProblemModal) {
-            reportProblemModal.addEventListener('click', (e) => {
-                if (e.target.id === 'report-problem-modal') {
-                    closeReportModal();
-                }
-            });
-        }
-
-        if (reportProblemForm) {
-            reportProblemForm.addEventListener('submit', (e) => {
+            
+            // --- Report Form Submission ---
+            document.getElementById('report-problem-form').addEventListener('submit', (e) => {
                 e.preventDefault();
-
-                // Get form data
                 const description = document.getElementById('problem-description').value;
                 const contact = document.getElementById('contact-info').value;
-
-                // Construct email body
-                const subject = "ข้อเสนอแนะ/ร้องเรียนจากเว็บไซต์กลุ่มเยาวชนบ้านบลูกาฮีเล";
-                let body = `รายละเอียด:\n${description}\n\n`;
-                if (contact) {
-                    body += `ข้อมูลติดต่อกลับ:\n${contact}`;
-                }
-
-                // Create mailto link
-                const mailtoLink = `mailto:usman.s25429@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-                // Show success message
-                reportProblemForm.style.display = 'none';
-                reportSuccessMessage.classList.remove('hidden');
+                const subject = "ข้อเสนอแนะ/ร้องเรียนจากเว็บไซต์";
+                let body = `รายละเอียด:\n${description}\n\n${contact ? `ข้อมูลติดต่อกลับ: ${contact}` : ''}`;
+                window.location.href = `mailto:your-email@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                 
-                // Open email client
-                window.location.href = mailtoLink;
-
-                // Close modal after a delay
+                const successMsg = document.getElementById('report-success-message');
+                successMsg.classList.remove('hidden');
                 setTimeout(() => {
-                    closeReportModal();
+                    successMsg.classList.add('hidden');
+                    reportModal.classList.add('hidden');
                 }, 3000);
             });
-        }
-
-        // --- New Script for toggling activity details ---
-        const showActivityDetailsBtn = document.getElementById('show-activity-details-btn');
-        const nasikabuDetails = document.getElementById('nasikabu-details');
-
-        if (showActivityDetailsBtn && nasikabuDetails) {
-            showActivityDetailsBtn.addEventListener('click', () => {
-                const isHidden = nasikabuDetails.classList.contains('hidden');
-                if (isHidden) {
-                    nasikabuDetails.classList.remove('hidden');
-                    showActivityDetailsBtn.textContent = 'ซ่อนรายละเอียด';
-                    // Scroll to the newly revealed section
-                    nasikabuDetails.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                } else {
-                    nasikabuDetails.classList.add('hidden');
-                    showActivityDetailsBtn.textContent = 'ดูรายละเอียดกิจกรรม';
-                }
-            });
-        }
+        });
     </script>
 </body>
 </html>
-
-
-
-
-
